@@ -21,13 +21,13 @@ export default  function ShowTrailer({id, setShowModal}) {
           onClick={() => setShowModal(false)}
           // onMouseOver={({ target }) => (target.style.color = "#c9c8c8")}
           // onMouseOut={(target) => (target.style.color = "white")}
-          className="fixed bottom-[100%] left-[95%] size-10 justify-end hover:bg-red-600 transition-all ease-in"
+          className="fixed bottom-[100%] md:left-[95%] left-[90%] size-10 justify-end hover:bg-red-600 transition-all ease-in"
           color="white"
         />
         <iframe
-          className="z-30 rounded-lg"
-          width="560"
-          height="315"
+          className="z-30 h-[240px] w-[320px] md:h-[380px] md:w-[680px] rounded-lg"
+          // width="560"
+          // height="315"
           src={`https://www.youtube.com/embed/${id}?si=jgtyHhLKDpuK2XY5`}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
