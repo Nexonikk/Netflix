@@ -12,7 +12,7 @@ const Browse = () => {
   useTrendingMovies();
   useUpcomingMovies();
   return (
-    <div className="bg-black">
+    <div className="bg-black no-scrollbar">
       <Header />
       <MainContainer />
       <SecondaryContainer />

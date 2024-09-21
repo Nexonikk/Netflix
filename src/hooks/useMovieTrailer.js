@@ -15,15 +15,13 @@ export const useMovieTrailer = (movieId) => {
         API_OPTIONS
       );
       const response = await data.json();
-      console.log(response);
 
       const filterData = response.results.filter(
         (video) => video.type === "Trailer"
       );
       const trailer = filterData.length ? filterData[0] : response.results[0];
-      console.log(trailer + "Trailer");
-      dispatch(addTrailerVideo(trailer));
+      dispatch(addTrailerVideo(trailer)); // dispatch the trailer to the store
     };
     getMoviesVideo();
-  }, []);
+  }, [movieId, dispatch]);
 };
